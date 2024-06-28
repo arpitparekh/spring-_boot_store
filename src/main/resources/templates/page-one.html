@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Hello MVC</title>
+</head>
+
+<body>
+    <form action="#" th:action="@{/page-one}" th:object="${message}" method="post">
+        <label for="content">Enter your message:</label>
+        <input type="text" id="content" name="content" th:field="*{content}" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

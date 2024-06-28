@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>User Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .user-data {
+            list-style: none;
+            padding: 0;
+        }
+
+        .user-data li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .user-data li span {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Data</h1>
+        <ul class="user-data">
+            <li><span>Name:</span> <span th:text="${user.name}"></span></li>
+            <li><span>Email:</span> <span th:text="${user.email}"></span></li>
+            <li><span>Age:</span> <span th:text="${user.age}"></span></li>
+            <li><span>Message:</span> <span th:text="${user.message}"></span></li>
+        </ul>
+    </div>
+</body>
+
+</html>
